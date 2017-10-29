@@ -60,5 +60,9 @@ $(function () {
                 }
             }
         })
-    })
+    });
+    $('[type="reset"]').on('click',function(){
+        /*6.重置验证*/
+        $('#form').data('bootstrapValidator').resetForm();
+    });
 })
