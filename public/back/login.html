@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
 
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="css/comment.css">
+</head>
+<body style="background-color: #222d32">
+
+<div class="col-md-4 col-lg-offset-4">
+    <div class="lt_login panel panel-primary">
+        <div class="panel-heading">后台管理系统</div>
+        <div class="panel-body">
+            <form id="form" autocomplete="off">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <div class="col-xs-8 col-xs-offset-2">
+                    <button type="reset" class="btn btn-default">Reset</button>
+                    <button type="submit" class="pull-right btn btn-primarytn">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

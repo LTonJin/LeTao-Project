@@ -56,6 +56,7 @@ $(function(){
             data:$form.serialize(),
             dataType:'json',
             success:function(data){
+                console.log(data);
                 if(data.success){
                     /*后台管理员 root 123456*/
                     /*登录成功*/
