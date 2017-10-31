@@ -1,4 +1,7 @@
 
+body{
+    background-color: #fff;
+}
 .lt_login{
     margin-top:150px;
 }
@@ -6,3 +9,123 @@
     background-color: #337ab7;
     color: #fff;
 }
+.mb20{
+    margin-bottom: 20px;
+}
+
+.aside{
+    width: 180px;
+    height: 100%;
+    background-color: #222d32;
+    position: absolute;
+    left:0;
+    transition: all 2s;
+}
+.aside.now{
+    left:-180px;
+}
+.aside .title{
+    height: 50px;
+    width: 100%;
+    background-color: #367fa9;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size:24px;
+}
+.aside .touxiang{
+    height: 110px;
+    color: #fff;
+    padding:30px 20px;
+}
+.aside .touxiang img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.aside .touxiang p{
+    display: inline-block;
+    font-size: 12px;
+}
+.lt_right{
+    margin-left: 180px;
+    transition: all 2s;
+}
+.lt_right.now{
+    margin-left: 0;
+}
+.header{
+    padding:0 20px;
+    height: 50px;
+    background-color:#3c8dbc;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+.now{
+    border-left-color: #3c8dbc;
+    color: #000;
+}
+
+.menu ul li{
+    line-height: 40px;
+
+    list-style: none;
+    color: #aaa;
+}
+.menu ul li a{
+    display: block;
+    padding-left: 30px;
+    width: 100%;
+    height: 40px;
+    color: #aaa;
+
+}
+.menu ul li.now a{
+    padding-left: 40px;
+    border-left: 3px solid #3c8dbc;
+    background: #1d1f21;
+    color: #fff;
+}
+.header .cai{
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+}
+.header .tui{
+    float: right;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+}
+.main{
+    background-color: #fff;
+    padding-top: 20px;
+}
+.container{
+    margin: 0;
+    width: 100%;
+}
+
+#sheet_l{
+    height: 400px;
+}
+#sheet_r{
+    height: 400px;
+}
+
+.user_info table{
+    width: 100%;
+    text-align: center;
+}
+.user_info th,.user_info td{
+    border:1px solid #ccc;
+    text-align: center;
+    height: 30px;
+}
+

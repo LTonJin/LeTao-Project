@@ -23,7 +23,7 @@
     </div>
     <div class="menu">
         <ul>
-            <li class="yonghuguanli"><a href="user.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+            <li class="yonghuguanli"><a href="javascript:;"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
             <li>
                 <a href="javascript:;"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
                 <div class="child" style="display: none">
@@ -47,18 +47,52 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li><a href="#">管理系统</a></li>
-                <li class="active">首页</li>
+                <li><a href="#">分类管理</a></li>
+                <li class="active">一级分类</li>
             </ol>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="user_info">
+        <div class="container">
+            <button class="btn_add btn btn-default mb20">添加分类</button>
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">序号</th>
+                    <th width="80%">分类名称</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+            <div class="text-right">
+                <ul id="paginator"></ul>
+            </div>
         </div>
     </div>
 
-    <div class="sheet">
-        <div class="sheet_l col-sm-6" id="sheet_l"></div>
-        <div class="sheet_r col-sm-6" id="sheet_r"></div>
-    </div>
-
-
 </div>
+
+<script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+        <td>{{(page-1)*size +i+1}}</td>
+        <td>{{v.categoryName}}</td>
+
+    </tr>
+    {{/each}}
+</script>
+
+
+
 
 
 
@@ -81,13 +115,39 @@
 </div>
 
 
+<div class="modal fade" tabindex="-1" id="addcateModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加新分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="from">
+                    <div class="form-group">
+                        <input type="text" name="categroyName" class="form-control" id="categroyName"  placeholder="请输入一级分类名称">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" form="from" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" form="from" class="btn_addcateName btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
-<script src="lib/artTemplate/template.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/comment.js"></script>
-<script src="js/index.js"></script>
+<script src="js/first.js"></script>
 </body>
 </html>
