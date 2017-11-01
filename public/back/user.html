@@ -23,7 +23,7 @@
     </div>
     <div class="menu">
         <ul>
-            <li class="yonghuguanli"><a href="javascript:;"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+            <li class="yonghuguanli now"><a href="javascript:;"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
             <li>
                 <a href="javascript:;"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
                 <div class="child" style="display: none">
@@ -88,7 +88,7 @@
     <td>{{v.username}}</td>
     <td>{{v.mobile}}</td>
     <td>{{v.isDelete===1?"正常":"禁用"}}</td>
-    <td>
+    <td data-id="{{v.id}}" data-is-delete="{{v.isDelete}}">
         {{if v.isDelete===1}}
         <button class="btn btn-xs btn-danger">禁用</button>
         {{/if}}
@@ -118,6 +118,25 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button type="button" class="btn_logout btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" id="userModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span> 您确定要执行此操作吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn_confirm btn btn-primary">确定</button>
             </div>
         </div>
     </div>

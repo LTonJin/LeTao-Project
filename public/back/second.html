@@ -23,12 +23,12 @@
     </div>
     <div class="menu">
         <ul>
-            <li class="yonghuguanli"><a href="javascript:;"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+            <li class="yonghuguanli"><a href="user.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
             <li>
                 <a href="javascript:;"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
-                <div class="child" style="display: none">
+                <div class="child" style="display: block">
                     <a class="first" href="first.html">一级分类</a>
-                    <a class="second" href="second.html">二级分类</a>
+                    <a class="second now" href="second.html">二级分类</a>
                 </div>
             </li>
             <li><a class="product" href="product.html"><span class="glyphicon glyphicon-tags"></span> 商品管理</a></li>
@@ -48,7 +48,7 @@
             <ol class="breadcrumb">
                 <li><a href="#">管理系统</a></li>
                 <li><a href="#">分类管理</a></li>
-                <li class="active">一级分类</li>
+                <li class="active">二级分类</li>
             </ol>
         </div>
 
@@ -95,7 +95,11 @@
     {{/each}}
 </script>
 
-
+<script type="text/html" id="tpl1">
+    {{each rows v i}}
+    <li><a href="javascript:;" data-id="{{v.id}}">{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
 
 
 
@@ -127,29 +131,50 @@
                 <h4 class="modal-title">添加新分类</h4>
             </div>
             <div class="modal-body">
-                <form id="from">
 
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <span class="droptext">请选择一级分类</span>
-                            <input type="hidden" name="categroyId" id="categroyId">
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">Action</a></li>
 
-                        </ul>
+                <form id="form">
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="dropdown-text">请选择一级分类</span>
+                                <!--这个可以用来传输数据，并且不会显示出来。-->
+                                <input type="hidden" name="categoryId" id="categoryId">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <!--挖个坑-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="brandName" name="brandName" placeholder="请输入二级分类名称">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="categroyName" class="form-control" id="categroyName"  placeholder="请输入二级分类名称">
+                        <input type="hidden" value=1 class="form-control" id="hot" name="hot" placeholder="请输入二级分类名称">
                     </div>
 
+                    <div class="form-group">
+                        <div class="fileupload_box">
+                            <button class="btn btn-default">上传图片</button>
+                            <input id="fileupload" type="file" name="pic1" class="btn btn-default" data-url="/category/addSecondCategoryPic">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group img_box">
+                        <img src="images/none.png" width="100" height="100" alt="">
+                        <input type="hidden" name="brandLogo" id="brandLogo">
+                    </div>
                 </form>
+
+
+
             </div>
             <div class="modal-footer">
-                <button type="button" form="from" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="submit" form="from" class="btn_addcateName btn btn-primary">确定</button>
+                <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" form="form" class="btn_comfirm btn btn-primary">确定</button>
             </div>
         </div>
     </div>
@@ -165,6 +190,8 @@
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
