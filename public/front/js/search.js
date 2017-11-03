@@ -30,9 +30,9 @@ $(".lt_history").on("click",".icon_empty",function () {
 $(".lt_history").on("click",".fa-close",function () {
 
     var index = $(this).data("index");
-    var a = $(this).siblings("a")[0];
-    console.log(a);
-    $(".search_text").val(a.text());
+    // var a = $(this).siblings("a")[0];
+    // console.log(a);
+    // $(".search_text").val(a.text());
 
     var btnArr = ["是","否"];
     mui.confirm("你确定要删除这条记录吗？","警告",btnArr,function (data) {

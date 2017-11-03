@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐淘管理系统-首页</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<div class="lt_container">
+    <!--侧边栏通用部分-->
+    <div class="aside">
+        <div class="aside_title">
+            <a href="index.html">LETAO</a>
+        </div>
+        <div class="portrait">
+            <img src="images/default.png" alt="">
+            <p>超级管理员</p>
+        </div>
+
+        <div class="aside_nav">
+            <ul>
+                <li>
+                    <a href="user.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="glyphicon glyphicon-list"></span>
+                        分类管理
+                    </a>
+                    <div class="child">
+                        <a href="first.html">一级分类</a>
+                        <a href="second.html">二级分类</a>
+                    </div>
+                </li>
+                <li class="now">
+                    <a href="product.html">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        商品管理
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <!--头部通用部分-->
+        <div class="header">
+            <a class="pull-left icon_menu" href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <a class="pull-right icon_logout" href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+        </div>
+        <!--面包屑部分-->
+        <div class="crumbs">
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li><a href="#">分类管理</a></li>
+                <li class="active">二级分类</li>
+            </ol>
+        </div>
+
+
+        <!--主题内容部分-->
+        <div class="info">
+            <button class="add_btn btn btn-sm btn-default">添加分类</button>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td width="5%">序号</td>
+                    <td width="15%">商品名称</td>
+                    <td width="20%">商品描述</td>
+                    <td width="10%">库存</td>
+                    <td width="10%">尺寸</td>
+                    <td width="10%">状态</td>
+                    <td width="20%">操作</td>
+
+                </tr>
+                </thead>
+                <tbody>
+                <!--挖个坑-->
+                </tbody>
+            </table>
+            <div class="text-right">
+                <ul id="paginator"></ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+<!--退出模态框-->
+
+<div class="modal" tabindex="-1" role="dialog" id="logoutModal">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>你确定要退出后台管理系统吗&hellip;</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn_logout btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--添加分类模态框-->
+<div class="modal" tabindex="-1" role="dialog" id="addcategoryModal">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+
+                <form id="form">
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="dropdown-text">请选择二级分类</span>
+                                <!--这个可以用来传输数据，并且不会显示出来。-->
+                                <input type="hidden" name="brandId" id="brandId">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <!--挖个坑-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="proName" name="proName" placeholder="请输入商品名称">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品描述"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="num" placeholder="请输入商品库存">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" name="num" value="1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="size" placeholder="请输入商品尺码(30-50)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="oldPrice" placeholder="请输入商品原价">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="price" placeholder="请输入商品折扣价">
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="fileupload_box">
+                            <button class="btn btn-default">上传图片</button>
+                            <input id="fileupload" type="file" multiple name="pic1" class="btn btn-default" data-url="/category/addSecondCategoryPic">
+                        </div>
+                    </div>
+                    <div class="form-group img_box">
+                        <!--<img src="images/none.png" width="100" height="100" alt="">-->
+                        <input type="hidden" name="productLogo" id="productLogo">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="reset" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" form="form" class="btn btn_logout btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+        <td>{{(page-1)*size + i+1}}</td>
+        <td>{{v.proName}}</td>
+        <td>{{v.proDesc}}</td>
+        <td>{{v.num}}</td>
+        <td>{{v.size}}</td>
+        <td>{{v.statu===1?"上架":"下架"}}</td>
+        <td>
+            {{if v.statu ===1}}
+            <button class="btn btn-success">上架</button>
+            {{/if}}
+            {{if v.statu ===0}}
+            <button class="btn btn-danger">下架</button>
+            {{/if}}
+
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tpl2">
+    {{each rows v i}}
+    <li><a href="javascript:;" data-id="{{v.id}}">{{v.brandName}}</a></li>
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/echarts/echarts.min.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

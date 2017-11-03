@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#main{
+    float: left;
+    margin-top: 50px;
+}
+#mainr{
+    float: right;
+    margin-top: 50px;
+
+}

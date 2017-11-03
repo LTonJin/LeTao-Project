@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐淘管理系统-首页</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="lt_container">
+    <!--侧边栏通用部分-->
+    <div class="aside">
+        <div class="aside_title">
+            <a href="index.html">LETAO</a>
+        </div>
+        <div class="portrait">
+            <img src="images/default.png" alt="">
+            <p>超级管理员</p>
+        </div>
+
+        <div class="aside_nav">
+            <ul>
+                <li>
+                    <a href="user.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span class="glyphicon glyphicon-list"></span>
+                        分类管理
+                    </a>
+                    <div class="child" style="display: none;">
+                        <a href="first.html">一级分类</a>
+                        <a href="second.html">二级分类</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="product.html">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        商品管理
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <!--头部通用部分-->
+        <div class="header">
+            <a class="pull-left icon_menu" href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <a class="pull-right icon_logout" href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+        </div>
+        <!--面包屑部分-->
+        <div class="crumbs">
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统</a></li>
+                <li class="active">首页</li>
+            </ol>
+        </div>
+
+
+        <!--主题内容部分-->
+        <div class="">
+            <div id="main" style="width: 500px;height:400px;"></div>
+            <div id="mainr" style="width: 500px;height:400px;"></div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<!--退出模态框-->
+
+<div class="modal" tabindex="-1" role="dialog" id="logoutModal">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>你确定要退出后台管理系统吗&hellip;</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn_logout btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/echarts/echarts.min.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

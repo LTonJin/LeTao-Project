@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+    background: #222d32;
+}
+.mt150{
+    margin-top: 150px;
+}
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
