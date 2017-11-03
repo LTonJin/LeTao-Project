@@ -1,0 +1,62 @@
+
+
+/*.mui-scroll-wrapper{*/
+    /*top: 45px;*/
+    /*left:0;*/
+/*}*/
+.content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.lt_nav{
+    margin: 10px;
+}
+img {
+    width: 100%;
+}
+.lt_nav ul li{
+    width: 33.33%;
+    float: left;
+}
+.lt_product{
+    margin: 10px;
+}
+.lt_product .item{
+    width: 48%;
+    display: block;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding:15px;
+}
+.item p span:first-child{
+    color: red;
+}
+.item p span:last-child{
+    text-decoration: line-through;
+}
+
+.lt_product .item:nth-child(odd){
+    float: left;
+}
+.lt_product .item:nth-child(even){
+    float: right;
+    margin-right:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

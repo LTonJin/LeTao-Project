@@ -1,0 +1,58 @@
+.content{
+    height: 100%;
+}
+.nav_left{
+    position: relative;
+    width: 90px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    background-color: skyblue;
+
+}
+.nav_left ul li{
+    width: 90px;
+    height: 50px;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    text-align: center;
+    line-height: 50px;
+}
+.nav_left ul li.now{
+    background-color: red;
+    border-right: none;
+}
+
+.nav_left ul li a{
+    color: #ffffff;
+}
+
+.nav_right{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.nav_right li{
+    background-color: #fff;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+
+}
+.nav_right img {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

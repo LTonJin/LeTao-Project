@@ -164,7 +164,7 @@ $(function () {
             data:param,
             success:function (data) {
                 if(data.success){
-                    $("#addModal").modal("hide");
+                    $("#addproductModal").modal("hide");
 
                     current = 1;
                     render();

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+.lt_item{
+
+    border-top: 1px solid #ccc;
+    padding: 10px;
+
+}
+.price{
+    color: #e32;
+}
+.size{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #666;
+    background-color: #ccc;
+}
+.lt_cart{
+    position: fixed;
+    padding:10px;
+    max-width: 640px;
+    width: 100%;
+    z-index: 999;
+    margin: 0 auto;
+}

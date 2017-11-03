@@ -1,0 +1,90 @@
+.lt_search{
+    padding: 10px;
+    /*position: relative;*/
+}
+.lt_search input{
+    height: 34px;
+    border: 1px solid #006699;
+    margin-bottom: 0;
+}
+.lt_search button{
+    position: absolute;
+    top: 10px;
+    right:10px;
+}
+
+@charset "UTF-8";
+
+.lt_sort {
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    padding: 0 10px;
+}
+
+.lt_sort a {
+    font-size: 12px;
+    color: #666;
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.lt_sort a.now {
+    color: darkorange;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.lt_product{
+    margin: 10px;
+    position: relative;
+}
+.lt_product .item{
+    width: 48%;
+    display: block;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    float: left;
+}
+.item p span:first-child{
+    color: red;
+}
+.item p span:last-child{
+    text-decoration: line-through;
+}
+
+.proName{
+    height: 42px;
+}
+
+.loading{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #069;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 150px;
+    animation: zhuan 1s infinite;
+}
+@keyframes zhuan {
+    from{
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to{
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+
+
+
+

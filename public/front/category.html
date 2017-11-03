@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/categroy.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="lt_container">
+    <div class="header">
+        <a class="icon_left" href="index.html"><span class="fa fa-home"></span></a>
+        <h4>乐淘云购</h4>
+        <a class="icon_right" href="search.html"><span class="fa fa-search"></span></a>
+    </div>
+
+    <div class="content">
+        <!--左边导航栏-->
+        <div class="nav_left">
+            <div class="mui-scroll-wrapper">
+                <ul class="mui-scroll categoryName">
+                    <!--挖个坑-->
+
+                </ul>
+            </div>
+        </div>
+
+
+        <!--右边导航栏-->
+        <div class="nav_right">
+            <div class="mui-scroll-wrapper">
+                <ul class="mui-scroll brandLogo">
+                    <!--挖个坑-->
+
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <div class="footer">
+
+        <div class="">
+            <ul class="mui-clearfix">
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li class="now">
+                    <a href="categroy.html">
+                        <span class="fa fa-bars"></span>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <span class="fa fa-user"></span>
+                        <p>会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script type="text/html" id="tpl">
+{{each rows v i}}
+    <li data-id="{{v.id}}" class="{{i===0?'now':''}}"><a href="#">{{v.categoryName}}</a></li>
+{{/each}}
+</script>
+
+<script type="text/html" id="tpl2">
+    {{each rows v i}}
+
+    <li>
+        <img src="{{v.brandLogo}}">
+        <p>{{v.brandName}}</p>
+    </li>
+
+    {{/each}}
+
+</script>
+
+
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="js/categroy.js"></script>
+</body>
+</html>
